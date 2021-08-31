@@ -9,11 +9,15 @@
 
     <!-- Define your beans here -->
 
+    <bean id="randomSalaryService" class="se.lexicon.service.RandomSalaryService"/>
 
-    <bean id="programmer" class="se.lexicon.model.Programmer"/>
+    <bean id="programmer" class="se.lexicon.model.Programmer">
+        <constructor-arg ref="randomSalaryService"/>
+    </bean>
 
-    <bean id="salesPerson" class="se.lexicon.model.SalesPerson"/>
-
+    <bean id="salesPerson" class="se.lexicon.model.SalesPerson">
+        <constructor-arg ref="randomSalaryService"/>
+    </bean>
 
 
 

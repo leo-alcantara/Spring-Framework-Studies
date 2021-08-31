@@ -16,8 +16,12 @@ public class App {
 
 
         System.out.println(programmer.getDescription());
-        
+        System.out.println(programmer.getSalary());
+
         System.out.println(salesPerson.getDescription());
+        System.out.println(salesPerson.getSalary());
+
+
 
 
 
