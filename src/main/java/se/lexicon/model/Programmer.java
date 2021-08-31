@@ -18,6 +18,10 @@ public class Programmer implements Employee {
         return "We love CODING!";
     }
 
+    public void setSalaryService(SalaryService salaryService) {
+        this.salaryService = salaryService;
+    }
+
     @Override
     public int getSalary() {
         return salaryService.getSalary();

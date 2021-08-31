@@ -1,5 +1,6 @@
 package se.lexicon.model;
 
+import se.lexicon.service.RandomSalaryService;
 import se.lexicon.service.SalaryService;
 
 public class SalesPerson implements Employee {
@@ -21,5 +22,9 @@ public class SalesPerson implements Employee {
     @Override
     public int getSalary() {
         return salaryService.getSalary();
+    }
+
+    public void setSalaryService(RandomSalaryService salaryService) {
+        this.salaryService = salaryService;
     }
 }

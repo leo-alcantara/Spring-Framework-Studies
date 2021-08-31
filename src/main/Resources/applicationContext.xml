@@ -11,6 +11,7 @@
 
     <bean id="randomSalaryService" class="se.lexicon.service.RandomSalaryService"/>
 
+    <!-- Constructor Injection
     <bean id="programmer" class="se.lexicon.model.Programmer">
         <constructor-arg ref="randomSalaryService"/>
     </bean>
@@ -18,6 +19,18 @@
     <bean id="salesPerson" class="se.lexicon.model.SalesPerson">
         <constructor-arg ref="randomSalaryService"/>
     </bean>
+    -->
+
+    <!-- Setter Injection-->
+    <bean id="programmer" class="se.lexicon.model.Programmer">
+        <property name="salaryService" ref="randomSalaryService" />
+    </bean>
+
+    <bean id="salesPerson" class="se.lexicon.model.SalesPerson">
+        <property name="salaryService" ref="randomSalaryService" />
+    </bean>
+
+
 
 
 
