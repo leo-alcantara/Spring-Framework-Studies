@@ -10,7 +10,7 @@ public class SalesPerson implements Employee {
 
     private SalaryService salaryService;
 
-    @Autowired
+
     public SalesPerson(SalaryService salaryService) {
         this.salaryService = salaryService;
     }
@@ -28,6 +28,7 @@ public class SalesPerson implements Employee {
         return salaryService.getSalary();
     }
 
+    @Autowired
     public void setSalaryService(RandomSalaryService salaryService) {
         this.salaryService = salaryService;
     }

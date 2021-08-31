@@ -9,7 +9,7 @@ public class Programmer implements Employee {
 
     private SalaryService salaryService;
 
-    @Autowired
+
     public Programmer(SalaryService salaryService) {
         this.salaryService = salaryService;
     }
@@ -22,6 +22,7 @@ public class Programmer implements Employee {
         return "We love CODING!";
     }
 
+    @Autowired
     public void setSalaryService(SalaryService salaryService) {
         this.salaryService = salaryService;
     }
