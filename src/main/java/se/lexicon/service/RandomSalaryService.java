@@ -1,10 +1,7 @@
 package se.lexicon.service;
 
-import org.springframework.stereotype.Component;
-
 import java.util.Random;
 
-@Component
 public class RandomSalaryService implements SalaryService {
 
     @Override

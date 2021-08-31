@@ -1,14 +1,15 @@
 package se.lexicon;
 
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import se.lexicon.model.Employee;
 
 public class App {
 
     public static void main( String[] args ) {
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(EmployeeConfig.class);
 
         Employee programmer = context.getBean("programmer", Employee.class);
 
